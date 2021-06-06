@@ -1,12 +1,12 @@
 ---
 title: "利用規約"
-date: 2020-08-06T21:52:09+09:00
+date: 2020-06-06T15:00:09+09:00
 draft: false
 tags: ["その他", "利用規約", "プライバシーポリシー"]
 description : "利用規約ページです"
 card : "summary_large_image"
 card : "summary_large_image"
-imgUrl : "/images/default.PNG"
+imgUrl : "/images/default.JPG"
 imgUrlWebP : "/images/default.webp"
 ---
 滋賀県情報Web(本サイト)をご覧いただきありがとうございます。ここでは本サイトの利用規約についてご確認いただけます。
