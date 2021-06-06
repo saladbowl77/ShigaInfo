@@ -1,0 +1,10 @@
+baseURL = "/"
+languageCode = "ja-jp"
+languageLang = "ja"
+isCJKLanguage = true
+title = "滋賀情報Web"
+
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
