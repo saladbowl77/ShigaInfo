@@ -63,6 +63,10 @@ main #blog_main p {font-size: 1.1rem;
 
 footer {border-top: 1px solid #dbdbdb; padding: 2px 5px; margin-top: 10px;}
 
+
+div.admax-switch {max-width: 100%!important;}
+div.admax-switch iframe {max-width: 100%!important;}
+
 @media screen and (max-width: 670px) {
     main .blog_link:first-child {width: calc(100% - 40px); height: 300px;}
     main .blog_link:first-child a{display: block;}
