@@ -8,3 +8,7 @@ pygmentsUseClasses = true
 pygmentsCodefences = true
 
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
