@@ -1,3 +1,7 @@
 {{ partial "header" . }}
-<h1>ページがありません</h1>
+{{ partial "nav" . }}
+<h1>ごめんなさい。ページが見つかりませんでした。以下のタグから気になる記事をチェックしてみてください！！</h1>
+{{ range .Site.Taxonomies.tags.ByCount }}
+<li><a href="{{ "/tags/" | relURL }}{{ .Name | urlize }}">{{ .Name }}({{ .Count }})</a></li>
+{{ end }}
 {{ partial "footer" . }}

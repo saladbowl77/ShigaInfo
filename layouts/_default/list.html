@@ -1,27 +1,7 @@
 {{ partial "header" . }}
-<style>
-  #tagshow {margin-left: 20px; font-size: 23pt; text-align: left; color: #06AEFF;}
-</style>
-</head>
 {{ partial "nav" . }}
-<main>
-  <section id="game">
-    <h2 id="tagshow">#{{ .Title }}のタグ一覧</h2>
-    <div id="product_wrap">
-      {{ $paginator := .Paginate (where .Data.Pages "Params.hidden" "ne" true) }}
-      {{ range sort .Paginator.Pages }}
-        <div class="product">
-          <a href="{{ .Permalink }}">
-              <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="">
-              <h3 class="meta">{{ .Title }}</h3>
-              <p class="meta">{{ .Description }}</p>
-          </a>
-        </div>
-      {{ end }}
-      </div>
-    </div>  
-  </section>
-</main>
+<h1>サイト内のタグ一覧</h1>
+{{ range .Site.Taxonomies.tags.ByCount }}
+<li><a href="{{ "/tags/" | relURL }}{{ .Name | urlize }}">{{ .Name }}({{ .Count }})</a></li>
+{{ end }}
 {{ partial "footer" . }}
-</body>
-</html>

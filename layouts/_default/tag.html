@@ -1,38 +1,26 @@
 {{ partial "header" . }}
-<style>
-#tagshow {margin-left: 20px; font-size: 23pt; text-align: left; color: #06AEFF;}
-</style>
-</head>
 {{ partial "nav" . }}
 <main>
-    <section id="game">
-        <h2 id="tagshow">#{{ .Title }}のタグ一覧</h2>
-        <div id="product_wrap">
-            {{ $paginator := .Paginate (where .Data.Pages "Params.hidden" "ne" true) }}
-            {{ range sort .Paginator.Pages }}
-            <div class="blog_link">
-            <a href="{{ .RelPermalink }}">
-                <div class="blog_link_Image">
-                <picture>
-                    <source srcset="{{ if .Params.imgUrlWebP }}{{ .Params.imgUrlWebP }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル" type="image/webp">
-                    <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
-                </picture>
-                </div>
-                <div class="blog_link_Txt">
-                <p class="date">{{ .Date.Format "2006 1/2" }}</p>
-                <h3>{{ .Title }}{{ partial "taxonomies_count" . }}</h3>
-                <p class="tags">
-                    {{ if .Params.tags }}
-                    {{ partial "tags_top" .Params.tags }}
-                    {{ end }}
-                </p>
-                </div>
-            </a>
-            </div>
-            {{ end }}
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <div class="blog_link">
+        <a href="{{ .RelPermalink }}">
+            <div class="blog_link_Image">
+            <picture>
+                <source srcset="{{ if .Params.imgUrlWebP }}{{ .Params.imgUrlWebP }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル" type="image/webp">
+                <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
+            </picture>
         </div>
-    </section>
+        <div class="blog_link_Txt">
+            <p class="date">{{ .Date.Format "2006 1/2" }}</p>
+            <h3>{{ .Title }}{{ partial "taxonomies_count" . }}</h3>
+            <p class="tags">
+                {{ if .Params.tags }}
+                {{ partial "tags_top" .Params.tags }}
+                {{ end }}
+            </p>
+        </div>
+        </a>
+    </div>
+{{ end }}
 </main>
 {{ partial "footer" . }}
-</body>
-</html>
