@@ -69,6 +69,11 @@ main #blog_main p {font-size: 1.1rem;
 
 
 main li {margin-left: 5px;}
+main table, main th, main td { border-collapse: collapse; border: 1px solid #ccc; line-height: 1.5;}
+main table th {width: 150px; padding: 10px; font-weight: bold; vertical-align: top;}
+main table td { width: 350px; padding: 10px; vertical-align: top;}
+main tr:nth-child(even) {background: #d9d9d9;}
+
 footer {border-top: 1px solid #dbdbdb; padding: 2px 5px; margin-top: 10px;}
 
 div.admax-switch {max-width: 100%!important;}
