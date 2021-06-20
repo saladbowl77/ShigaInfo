@@ -1,4 +1,4 @@
 [[headers]]
-  for = "/*.xml"
+  for = "/index.xml"
     [headers.values]
         Access-Control-Allow-Origin = "*"
