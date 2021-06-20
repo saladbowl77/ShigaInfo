@@ -7,6 +7,9 @@ title = "滋賀情報Web"
 pygmentsUseClasses = true
 pygmentsCodefences = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
 [taxonomies]
   tag = "tags"
   category = "categories"
