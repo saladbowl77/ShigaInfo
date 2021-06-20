@@ -28,3 +28,8 @@ HUGO_VERSION = "0.83.1"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
+
+[[headers]]
+  for = "/*.xml"
+    [headers.values]
+        Access-Control-Allow-Origin = "*"
