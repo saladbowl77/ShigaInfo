@@ -28,9 +28,3 @@ HUGO_VERSION = "0.83.1"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
-
-[[headers]]
-  # Define which paths this specific [[headers]] block will cover.
-  for = "/index.xml"
-    [headers.values]
-    Access-Control-Allow-Origin = "*"
