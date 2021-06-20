@@ -18,7 +18,6 @@
       <div class="related">{{ partial "related" . }}</div>
       {{ end }}
     </div>
-    {{ partial "AdsNinjaB" . }}
   </div>
 </main>
 {{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
