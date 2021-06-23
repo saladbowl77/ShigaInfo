@@ -1,26 +1,30 @@
 {{ partial "header" . }}
 {{ partial "nav" . }}
-<main>
-    {{ range .Pages.ByPublishDate.Reverse }}
-    <div class="blog_link">
-        <a href="{{ .RelPermalink }}">
-            <div class="blog_link_Image">
-            <picture>
-                <source srcset="{{ if .Params.imgUrlWebP }}{{ .Params.imgUrlWebP }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル" type="image/webp">
-                <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
-            </picture>
+<main class="section">
+    <div class="container">
+        <div id="blog_list">
+            {{ range .Pages.ByPublishDate.Reverse }}
+            <div class="blog_link">
+                <a href="{{ .RelPermalink }}">
+                    <div class="blog_link_Image">
+                    <picture>
+                        <source srcset="{{ if .Params.imgUrlWebP }}{{ .Params.imgUrlWebP }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル" type="image/webp">
+                        <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
+                    </picture>
+                </div>
+                <div class="blog_link_Txt">
+                    <p class="date">{{ .Date.Format "2006 1/2" }}</p>
+                    <h3>{{ .Title }}{{ partial "taxonomies_count" . }}</h3>
+                    <p class="tags">
+                        {{ if .Params.tags }}
+                        {{ partial "tags_top" .Params.tags }}
+                        {{ end }}
+                    </p>
+                </div>
+                </a>
+            </div>
+            {{ end }}
         </div>
-        <div class="blog_link_Txt">
-            <p class="date">{{ .Date.Format "2006 1/2" }}</p>
-            <h3>{{ .Title }}{{ partial "taxonomies_count" . }}</h3>
-            <p class="tags">
-                {{ if .Params.tags }}
-                {{ partial "tags_top" .Params.tags }}
-                {{ end }}
-            </p>
-        </div>
-        </a>
     </div>
-{{ end }}
 </main>
 {{ partial "footer" . }}
