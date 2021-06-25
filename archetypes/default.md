@@ -6,5 +6,5 @@ tags: [""]
 description : ""
 card : "summary_large_image"
 imgUrl : "/images/default.JPG" #imgUrl : "/images/cv-default.PNG"
-imgUrlWebP : "/images/default.webp"
+imgUrlWebP : "/images/default.webp" #imgUrl : "/images/cv-default.webp"
 ---
