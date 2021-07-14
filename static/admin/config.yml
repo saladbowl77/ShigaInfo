@@ -3,9 +3,9 @@ backend:
   name: git-gateway
   accept_roles:
     - admin
-  branch: master 
+  branch: main 
 locale: 'ja' #メッセージが日本語化
-media_folder: "./static/img" # 画像ファイルの格納場所を指定
+media_folder: "/static/img" # 画像ファイルの格納場所を指定
 public_folder : "/img" #公開する際の画像フォルダのパスを指定
 
 # 編集オブジェクト
@@ -21,4 +21,9 @@ collections:
     fields:
           - {label: "タイトル", name: "title", widget: "string"}
           - {label: "公開日", name: "date", widget: "datetime"}
+          - {label: "タグ", name: "tags", widget: "relation", collection: "tags", multiple: true}
+          - {label: "あらすじ", name: "description", widget: "string", required: false}
+          - {label: "Twitterカード", name: "card", widget: "select", options: ["summary", "summary_large_image"]}
+          - {label: "PNG画像", name: "shopImage", widget: "image", default: "/images/default.JPG"}
+          - {label: "WebP画像", name: "shopImage", widget: "image", default: "/images/default.webp"}
           - {label: "本文", name: "body", widget: "text"}
