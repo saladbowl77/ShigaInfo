@@ -1,0 +1,24 @@
+# GitHubのブランチ指定
+backend:
+  name: git-gateway
+  accept_roles:
+    - admin
+  branch: master 
+locale: 'ja' #メッセージが日本語化
+media_folder: "./static/img" # 画像ファイルの格納場所を指定
+public_folder : "/img" #公開する際の画像フォルダのパスを指定
+
+# 編集オブジェクト
+collections:
+  - name: "Book" 
+    label: "Book"
+    folder: "content/"
+    create: true
+    slug: "{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
+    editor:
+      preview: false #CMSの編集画面にプレビューがつく
+    # コレクションのフィールド
+    fields:
+          - {label: "タイトル", name: "title", widget: "string"}
+          - {label: "公開日", name: "date", widget: "datetime"}
+          - {label: "本文", name: "body", widget: "text"}
