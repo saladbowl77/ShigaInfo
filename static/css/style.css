@@ -69,6 +69,7 @@ border-radius: 100%;
 font-size: 10pt;}
 main ul.pagination li a {text-decoration: none; color: #121212;}
 
+div#title_data p.imageByText{font-size: .8rem; color: #989898;}
 main #blog_main p {font-size: 1.1rem;
     line-height: 1.8rem;
     color: #484848;

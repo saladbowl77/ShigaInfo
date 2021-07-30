@@ -23,4 +23,5 @@ collections:
       - {label: "Twitterカード", name: "card", widget: "select", options: ["summary", "summary_large_image"]}
       - {label: "PNG画像", name: "imgUrl", widget: "image", default: "/images/default.JPG"}
       - {label: "WebP画像", name: "imgUrlWebP", widget: "image", default: "/images/default.webp"}
+      - {label: "画像出典表記", name: "imageBy", widget: "string", required: false}
       - {label: "本文", name: "body", widget: "text"}

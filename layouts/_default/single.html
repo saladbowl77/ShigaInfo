@@ -18,6 +18,9 @@
         <source srcset="{{ if .Params.imgUrlWebP }}{{ .Params.imgUrlWebP }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル" type="image/webp">
         <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
       </picture>
+      {{ if .Params.imageBy }}
+        <p class="imageByText">画像出典 : {{ .Params.imageBy }}</p>
+      {{ end }}
     </div>
     {{if not .Date.IsZero }}<h2 class="subtitle is-6"></h2>{{ end }}
     {{ if and (.Site.Params.Info.adsense) (.Params.adsenseTop) }}
@@ -32,7 +35,4 @@
     {{ partial "AdsNinjaB" . }}
   </div>
 </main>
-{{ if (and (.Site.Params.Info.codeCopy) (findRE "<pre" .Content 1)) }}
-    <script src="/js/copycode.js"></script>
-{{ end }}
 {{ partial "footer" . }}
