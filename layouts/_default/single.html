@@ -14,10 +14,7 @@
         </span>
         </p>
       </div>
-      <picture>
-        <source srcset="{{ if .Params.imgUrlWebP }}{{ .Params.imgUrlWebP }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル" type="image/webp">
-        <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
-      </picture>
+      <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
       {{ if .Params.imageBy }}
         <p class="imageByText">画像出典 : {{ .Params.imageBy }}</p>
       {{ end }}
