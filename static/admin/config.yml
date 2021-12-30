@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "/static/images"
-public_folder : "/images"
+media_folder: "/static/images/"
+public_folder : "/static/images/"
 locale: 'ja'
 
 
@@ -12,8 +12,7 @@ collections:
     folder: "content/news/"
     create: true
     path: "news/{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
-    preview_path: "news/{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
-    slug: "{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
+    slug: "news/{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
     editor:
       preview: false #CMSの編集画面にプレビューがつく
     # コレクションのフィールド
