@@ -8,10 +8,10 @@ locale: 'ja'
 
 collections:
   - name: "News" 
-    label: "News"
-    folder: "content/news/"
+    label: "news"
     create: true
-    path: "news/{{year}}/{{month}}/{{slug}}"
+    folder: "content/news/"
+    path: "{{year}}/{{month}}/{{slug}}"
     preview_path: "news/{{year}}/{{month}}/{{slug}}"
     slug: "{{day}}{{hour}}{{minute}}"
     editor:
