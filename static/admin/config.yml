@@ -11,7 +11,7 @@ collections:
     label: "News"
     folder: "content/news/"
     create: true
-    path: "news/{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
+    preview_path: "news/{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
     slug: "news/{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
     editor:
       preview: false #CMSの編集画面にプレビューがつく
