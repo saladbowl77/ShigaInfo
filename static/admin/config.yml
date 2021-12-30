@@ -10,7 +10,7 @@ collections:
   - name: "News" 
     label: "news"
     create: true
-    folder: "content/news/"
+    folder: "/content/news/"
     path: "{{year}}/{{month}}/{{slug}}"
     preview_path: "news/{{year}}/{{month}}/{{slug}}"
     slug: "{{day}}{{hour}}{{minute}}"
@@ -23,6 +23,6 @@ collections:
       - {label: "タグ", name: "tags", widget: "list"}
       - {label: "あらすじ", name: "description", widget: "string", required: false}
       - {label: "Twitterカード", name: "card", widget: "select", options: ["summary", "summary_large_image"]}
-      - {label: "PNG画像", name: "imgUrl", widget: "image", default: "/images/default.JPG", media_folder: "images"}
+      - {label: "PNG画像", name: "imgUrl", widget: "image", default: "/images/default.JPG", media_folder: "/static/images/", public_folder : "/images/"}
       - {label: "画像出典表記", name: "imageBy", widget: "string", required: false}
       - {label: "本文", name: "body", widget: "text"}
