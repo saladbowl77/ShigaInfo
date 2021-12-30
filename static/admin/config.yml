@@ -9,7 +9,7 @@ locale: 'ja'
 collections:
   - name: "News" 
     label: "News"
-    folder: "content/news"
+    folder: "content/news/"
     create: true
     slug: "{{year}}/{{month}}/{{day}}{{hour}}{{minute}}"
     editor:
