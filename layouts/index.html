@@ -8,10 +8,7 @@
             <div class="blog_link">
               <a href="{{ .RelPermalink }}">
                 <div class="blog_link_Image">
-                  <picture>
-                    <source srcset="{{ if .Params.imgUrlWebP }}{{ .Params.imgUrlWebP }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル" type="image/webp">
-                    <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
-                  </picture>
+                  <img src="{{ if .Params.imgUrl }}{{ .Params.imgUrl }}{{else}}{{ end }}" alt="{{ .Title }}のサムネイル">
                 </div>
                 <div class="blog_link_Txt">
                   <p class="date">{{ .Date.Format "2006 1/2" }}</p>
