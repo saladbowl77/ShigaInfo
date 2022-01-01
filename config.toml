@@ -3,6 +3,7 @@ languageCode = "ja-jp"
 languageLang = "ja"
 isCJKLanguage = true
 title = "滋賀情報Web"
+timezone: Asia/Tokyo
 
 pygmentsUseClasses = true
 pygmentsCodefences = true
