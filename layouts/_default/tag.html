@@ -13,7 +13,7 @@
                     </picture>
                 </div>
                 <div class="blog_link_Txt">
-                    <p class="date">{{ .Date.Format "2006 1/2" }}</p>
+                    <p class="date">{{ .Date.Local.Format "2006/01/02 15:04" }}</p>
                     <h3>{{ .Title }}{{ partial "taxonomies_count" . }}</h3>
                     <p class="tags">
                         {{ if .Params.tags }}
