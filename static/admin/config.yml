@@ -19,7 +19,7 @@ collections:
     # コレクションのフィールド
     fields:
       - {label: "タイトル", name: "title", widget: "string"}
-      - {label: "公開日", name: "date", widget: "datetime", picker_utc: true}
+      - {label: "公開日", name: "date", widget: "datetime", picker_utc: false}
       - {label: "タグ", name: "tags", widget: "list"}
       - {label: "あらすじ", name: "description", widget: "string", required: false}
       - {label: "Twitterカード", name: "card", widget: "select", options: ["summary", "summary_large_image"]}
