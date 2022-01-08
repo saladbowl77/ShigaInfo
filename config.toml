@@ -19,3 +19,17 @@ pygmentsCodefences = true
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[related]
+  includeNewer = false
+  threshold = 80
+  toLower = false
+[[related.indices]]
+  name = 'tags'
+  weight = 60
+[[related.indices]]
+  name = 'date'
+  weight = 50
+[[related.indices]]
+  name = 'imgUrl'
+  weight = 30

@@ -26,9 +26,9 @@
     <div id="blog_main">
       {{ .Content }}
       {{ if .Site.Params.Info.related }}
-      <div class="related">{{ partial "related" . }}</div>
       {{ end }}
     </div>
+    {{ partial "related.html" . }}
     {{ partial "AdsNinjaB" . }}
   </div>
 </main>
