@@ -25,11 +25,9 @@
     {{ end }}
     <div id="blog_main">
       {{ .Content }}
-      {{ if .Site.Params.Info.related }}
-      {{ end }}
+      {{ partial "AdsNinjaB" . }}
+      {{ partial "related.html" . }}
     </div>
-    {{ partial "related.html" . }}
-    {{ partial "AdsNinjaB" . }}
   </div>
 </main>
 {{ partial "footer" . }}
