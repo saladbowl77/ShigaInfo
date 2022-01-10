@@ -85,8 +85,11 @@ div#title_data img {
 }
 div#title_data p.imageByText{font-size: .8rem; color: #989898;}
 div#title_data p.imageByText a{font-size: .8rem; color: #989898;}
-main #blog_main p {font-size: 1.1rem;
-    line-height: 1.8rem;
+main #blog_main p {font-size: 1rem;
+    line-height: 1.9rem;
+    letter-spacing: calc(1px - .0625em);
+    font-feature-settings: "palt" 1;
+    font-kerning: normal;
     color: #484848;
     margin-bottom: 10px;
 }
