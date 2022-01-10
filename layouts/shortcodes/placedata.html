@@ -19,7 +19,10 @@
         box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.15);
     }
     div.placeDataWrap h3 {margin: 0 0 0 25px;}
-    div.placeDataWrap table.placeDataTable {width: 100%;}
+    div.placeDataWrap table.placeDataTable {width: 100%; table-layout: fixed;}
+    div.placeDataWrap table.placeDataTable p,
+    div.placeDataWrap table.placeDataTable a,
+    div.placeDataWrap table.placeDataTable li {font-size: .6rem;}
     div.placeDataWrap table.placeDataTable th {background-color: #abe7e2;}
     div.placeDataWrap table.placeDataTable td {background-color: #fefefe;}
     div.placeDataWrap iframe {margin-top: 7px;}
@@ -38,6 +41,7 @@
     div.placeDataWrap table.placeDataTable td.accessTdWrap div.accessIcon {display: flex; width: 100px; height: 23px; padding: 3px 2px 2px 2px; background-color: #aeaeae; border-radius: 5px;}
     div.placeDataWrap table.placeDataTable td.accessTdWrap div.accessIcon svg,
     div.placeDataWrap table.placeDataTable td.accessTdWrap div.accessIcon span {color: #fefefe; line-height: 25px;}
+    div.placeDataWrap table.placeDataTable td.accessTdWrap a {word-wrap: break-word; overflow-wrap : break-word;}
 
     @media screen and (max-width: 670px) {
         div.placeDataWrap table.placeDataTable th,
