@@ -1,5 +1,15 @@
+@font-face {
+    font-family: minmoji;
+    src: url('https://minmoji.ucda.jp/fontseot/https%3A__shiga-info.net');
+    src: local('minmoji'),
+        url('https://minmoji.ucda.jp/fontswoff/https%3A__shiga-info.net') format('woff'),
+        url('https://minmoji.ucda.jp/fonts/https%3A__shiga-info.net') format('opentype');
+    font-display: swap;
+}
+
 html,body,header,main,footer,section, div,table,tr,td,th,
 h1,h2,h3,h4,h5,p,a,span,tr,td, ul,li {margin: 0; padding: 0; font-family: 'Noto Sans JP', sans-serif;}
+p,a,td,li {font-family: minmoji,'Noto Sans JP', sans-serif;}
 img {max-width: 100%;}
 main {width: calc(100%- 20px); margin: 0 10px;}
 
