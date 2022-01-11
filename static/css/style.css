@@ -67,12 +67,12 @@ main .blog_link .blog_link_Txt p.tags {font-size: 1rem; font-weight: 300; color:
 
 div#pagenation {width: 100%;}
 div#pagenationWrap {display: block; margin: 0 auto; width: max-content;}
-main ul.pagination {display: flex; flex-wrap: nowrap; width: max-content;}
+main ul.pagination {display: flex; flex-wrap: wrap; width: max-content;}
 main ul.pagination li {list-style: none;
-width: 30px;
-height: 30px;
+width: 25px;
+height: 25px;
 margin: 5px;
-line-height: 30px;
+line-height: 25px;
 text-align: center;
 box-shadow: 9px 9px 2rem rgba(0, 0, 0, 0.12);
 border-radius: 100%;
